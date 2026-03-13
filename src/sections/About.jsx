@@ -3,13 +3,15 @@ import Globe from "react-globe.gl";
 import Button from "../components/Button.jsx";
 
 const About = () => {
-    const  [hasCopied, setHasCopied] = useState(false);
+    const [hasCopied, setHasCopied] = useState(false);
     const handleCopy = () => {
         navigator.clipboard.writeText("rahulshiv953727@gmail.com");
 
         setHasCopied(true);
 
-        setTimeout(() => {setHasCopied(false)},2000)
+        setTimeout(() => {
+            setHasCopied(false)
+        }, 2000)
     }
 
     return (
@@ -27,8 +29,7 @@ const About = () => {
                 </div>
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:w-[276px] h-fit object-contain"/>
-
+                        <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain"/>
                         <div>
                             <p className="grid-headtext">Tech Stack</p>
                             <p className="grid-subtext">I specialize in JavaScript/TypeScript with a focus on React and
@@ -50,7 +51,9 @@ const About = () => {
                         <div>
                             <p className="grid-headtext">I work remotely across most timezones.</p>
                             <p className="grid-subtext">I'm based in India, with remote work available.</p>
-                            <Button name="Contact Me" isBeam containerClass="w-full mt-10"/>
+                            <a href="#contact" className="w-fit ">
+                                <Button name="Contact Me" isBeam containerClass="w-full mt-10"/>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -67,11 +70,11 @@ const About = () => {
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
                         <img src="/assets/grid4.png" alt="grid-4"
-                             className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"/>
+                             className="w-full md:h-[126px] sm:h-[276px] h-fit object-contain"/>
                         <div className="space-y-2 ">
                             <p className="grid-subtext text-center">Contact Me</p>
                             <div className="copy-container" onClick={handleCopy}>
-                                <img src={hasCopied ? '/assets/tick.svg' : 'assets/copy.svg'} alt="copy me" />
+                                <img src={hasCopied ? '/assets/tick.svg' : 'assets/copy.svg'} alt="copy me"/>
                                 <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">rahulshiv953727@gmail.com</p>
                             </div>
                         </div>
