@@ -23,9 +23,16 @@ const Navbar = () => {
         <header className="fixed top-0 left-0 right-0 z-50 bg-black/90">
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-between intems-center py-5 mx-auto c-space">
-                    <a href ="/" className="text-neutral-400 font-bold text-xl hover:text-white
+                    {/*<a href ="/" className="text-neutral-400 font-bold text-xl hover:text-white*/}
+                    {/*transition-colors">*/}
+                    {/*    Rahul*/}
+                    {/*</a>*/}
+                    <a href="/" className="flex items-center gap-3">
+                        <img src="/rahul-logo.svg" alt="Rahul" width={36} height={36} />
+                        <span className="text-neutral-400 font-bold text-xl hover:text-white
                     transition-colors">
-                        Rahul
+                            Rahul
+                        </span>
                     </a>
                     <button onClick={toggleMenu} className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
                             aria-label="Toggle menu">
